@@ -1,80 +1,62 @@
-Flashcards 
-This is a flashcards game in which the user can add flashcards, remove flashcards, import flashcards, export flashcards, ask questions about flashcards, print the log of previous operations, see the hardest flashcards and reset the statistics.
+# Flashcards Application
 
-Requirements
-Golang 1.16 or higher
-Usage
-Clone the repository:
+This is a command-line application for creating and practicing flashcards. 
 
-bash
-Copy code
-git clone https://github.com/example-user/flashcards.git
-Change directory to the cloned repository:
+The application allows users to add, remove, import and export flashcards, as well as quiz themselves on the flashcards they have created. 
 
-bash
-Copy code
+The application also keeps track of errors and logs user activity.
+
+## Installation
+To install the application, you will need to have [Go](https://go.dev/) installed on your machine. Once you have installed Go, follow the steps below:
+
+Clone the repository to your machine:
+
+
+```
+git clone https://github.com/username/flashcards.git
+```
+Replace username with your GitHub username.
+
+
+Navigate to the cloned repository:
+
+```
 cd flashcards
-To start the program, run:
+```
+Build the application:
+```
+go build
+```
+Run the application:
 
-bash
-Copy code
-go run main.go
-The program will prompt you to enter the number of cards to add.
+```
+./flashcards
+```
+## Usage
+When you run the application, you will be presented with a menu that allows you to perform various actions:
 
-arduino
-Copy code
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-To add a new card, enter add. The program will then prompt you to enter the number of cards to add. Enter the number and then enter the term and definition of the card.
+* **Add**: Add a new flashcard to the deck.
 
-css
-Copy code
-Input the number of flashcards:
-yaml
-Copy code
-The card:
-yaml
-Copy code
-The definition of the card:
-To remove a card, enter remove. The program will then prompt you to enter the term of the card you want to remove.
+* **Remove**: Remove an existing flashcard from the deck.
 
-Copy code
-Which card?
-To import cards, enter import. The program will then prompt you to enter the name of the file that contains the cards you want to import.
+* **Import**: Import flashcards from a JSON file.
 
-arduino
-Copy code
-File name:
-To export cards, enter export. The program will then prompt you to enter the name of the file where you want to export the cards.
+* **Export**: Export flashcards to a JSON file.
 
-arduino
-Copy code
-File name:
-To ask questions about the cards, enter ask. The program will randomly select a card and ask you to enter its definition. Enter your answer and the program will tell you if you are correct or not.
+* **Ask**: Quiz yourself on the flashcards in the deck.
 
-bash
-Copy code
-How many times to ask?
-json
-Copy code
-Print the definition of "word":
-yaml
-Copy code
-Your answer:
-To see the log of previous operations, enter log. The program will print the log of previous operations.
+* **Log**: Print the log of user activity.
 
-arduino
-Copy code
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-To see the hardest cards, enter hardest card. The program will print the cards with the highest error count.
+* **Hardest card**: Print the flashcard(s) with the highest error count.
 
-arduino
-Copy code
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-To reset the statistics, enter reset stats.
-arduino
-Copy code
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
-To exit the program, enter exit. The program will save the cards to a file (if you specified a file when you ran the program) and then exit.
-arduino
-Copy code
-Input the action (add, remove, import, export, ask, exit, log, hardest card, reset sta
+* **Reset stats**: Reset the error count for all flashcards.
+
+* ** Exit**: Exit the application.
+
+## Data Persistence
+The flashcards are stored in memory while the application is running. 
+
+If you want to persist the flashcards across multiple sessions, you can use the import and export commands to load and save the flashcards to a JSON file.
+
+## License
+The application is open-source software released under the MIT license.
