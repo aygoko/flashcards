@@ -51,7 +51,7 @@ When you run the application, you will be presented with a menu that allows you 
 
 * **Reset stats**: Reset the error count for all flashcards.
 
-* ** Exit**: Exit the application.
+* **Exit**: Exit the application.
 
 ## Data Persistence
 The flashcards are stored in memory while the application is running. 
